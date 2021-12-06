@@ -679,7 +679,6 @@ class CiviCRM_Profile_Sync_Custom_CiviCRM_Address_Field extends acf_field {
 			'return_format' => 'value',
 			'save_custom' => 0,
 		];
-
 		// Define Street Address Field.
 		$street_address = [
 			'key' => 'field_address_street_address',
@@ -793,7 +792,7 @@ class CiviCRM_Profile_Sync_Custom_CiviCRM_Address_Field extends acf_field {
 		// Define Post Code Field.
 		$post_code = [
 			'key' => 'field_address_postal_code',
-			'label' => __( 'Post Code', 'civicrm-wp-profile-sync' ),
+			'label' => __( 'Postal Code', 'civicrm-wp-profile-sync' ),
 			'name' => 'postal_code',
 			'type' => 'text',
 			'parent' => $field['key'],
@@ -963,19 +962,19 @@ class CiviCRM_Profile_Sync_Custom_CiviCRM_Address_Field extends acf_field {
 		// Add Subfields.
 		$field['sub_fields'] = [
 			$location,
-			$primary,
-			$billing,
+		       	$primary,
+                        // $billing,
 			$street_address,
 			$supplemental_address_1,
-			$supplemental_address_2,
-			$supplemental_address_3,
+			//$supplemental_address_2,
+			//$supplemental_address_3,
 			$city,
 			$post_code,
 			$country_id,
 			$state_province_id,
-			$geo_code_1,
-			$geo_code_2,
-			$manual_geo_code,
+			//$geo_code_1,
+			//$geo_code_2,
+			//$manual_geo_code,
 			$address_id,
 		];
 
